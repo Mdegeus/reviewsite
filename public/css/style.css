@@ -1,0 +1,150 @@
+h1, h2, h3, h4, h5, small, strong, p{
+    color: white;
+}
+
+.modal-title {
+    color: rgb(49, 49, 49);
+}
+
+a {
+    text-decoration: none;
+}
+
+.reviewCardHigh {
+    margin: 5px 0 5px 0;
+    border-left-width: .4em;
+    border-color: rgb(63, 255, 73);
+    background-color: rgb(5, 5, 5);
+}
+
+.reviewCardLow {
+    margin: 5px 0 5px 0;
+    border-left-width: .4em;
+    border-color: rgb(255, 92, 63);
+    background-color: rgb(5, 5, 5);
+}
+
+.item-container {
+    margin: 40px 30px 30px 30px;
+}
+
+.item-card {
+    border-radius: 15px 15px 20px 20px;
+    background-color: rgb(44, 44, 44);
+    color: white; 
+    border-width: 0; 
+    height: 100%;
+}
+
+.item-card > .card-img-top {
+    padding: .8em;
+    border-radius: 20px;
+}
+
+.lower-card-btn {
+    border-radius: 0 0 20px 20px;
+    background-color: rgb(153, 0, 255);
+    width: 100%;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.lower-card-btn:hover {
+    background-color: rgb(255, 0, 128);
+    color: rgb(255, 255, 255);
+}
+
+.block-btn {
+    border-radius: 0;
+    background-color: rgb(0, 153, 255);
+    margin:0 auto;
+    display:block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.clip-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.homeButton {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.card-tag {
+    padding: 1px 4px 1px 4px;
+    margin: 0 1px 0 1px;
+    font-size: 10px;
+    font-family: 'Viga', sans-serif;
+    display:inline-block;
+    border-radius:15px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #cd11ff;
+
+    position: absolute;
+    bottom: 4.8em;
+}
+
+.tag-button {
+    padding: 0 4px 0 4px;
+    margin: 0 1px 3px 1px;
+    display:inline-block;
+    border-radius:15px;
+    border-style: solid;
+    border-width: 2.5px;
+    color: white;
+    background-color: rgb(27, 27, 27);
+    border-color: #cd11ff;
+}
+
+.tag {
+    padding: 0 4px 0 4px;
+    margin: 0 1px 0 1px;
+    display:inline-block;
+    border-radius:15px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #cd11ff;
+}
+
+.form-command-input {
+    width: 100%;
+}
+
+.item-title-div {
+
+}
+
+.item-title-div > img {
+    width: 100%;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.item-text-div {
+    padding: 30px;
+}
+
+.item-top-grid {
+    margin-top: 1em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% 55%;
+    grid-template-rows: fit-content;
+    width: 100%;
+    padding: 0;
+}
+
+.textBox {
+    overflow:hidden;
+    background-color: rgb(43, 43, 43);
+    height: fit-content;
+    border-width: 1px;
+    border-color: black;
+    color: white;
+}
