@@ -1,3 +1,10 @@
+/* Defaults */
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
 h1, h2, h3, h4, h5, small, strong, p{
     color: white;
 }
@@ -8,6 +15,26 @@ h1, h2, h3, h4, h5, small, strong, p{
 
 a {
     text-decoration: none;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Css */
+
+/* searchbar */
+.searchbar-container {
+    width: 100%;
+    padding: 0 6%;
+}
+
+.searchbar {
+    width: 100%;
+    padding: .6em .6em;
+    border-radius: 15px;
+    border: none;
 }
 
 .reviewCardHigh {
@@ -25,7 +52,7 @@ a {
 }
 
 .item-container {
-    margin: 40px 30px 30px 30px;
+    padding: 40px 30px 30px 30px;
 }
 
 .item-card {
@@ -114,10 +141,6 @@ a {
 
 .form-command-input {
     width: 100%;
-}
-
-.item-title-div {
-
 }
 
 .item-title-div > img {

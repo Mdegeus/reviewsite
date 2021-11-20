@@ -68,12 +68,13 @@
                 <input class="form-control" type="email" required name="email" placeholder="Email">
                 <br>
                 <textarea class="form-command-input" type="text" required name="command"></textarea>
-                <select type="text" required name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <select type="text" name="rating" required>
+                    <option value="">Select A Rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
             </select>
             </div>
             <div class="modal-footer">
@@ -101,11 +102,23 @@
         $text = $_POST['command'];
         $rating = $_POST['rating'];
 
-        $text = htmlspecialchars($text, ENT_QUOTES);
+        $text = htmlspecialchars($text);
 
-        $sql = "INSERT INTO reviews (item_id, username, email, command, rating)
-        VALUES ('$itemId', '$name', '$email', '$text', '$rating')";
-        $pdo->exec($sql);
+        if ($rating >= 1 && $rating <= 5) {
+            $sql = "INSERT INTO reviews (item_id, username, email, command, rating)
+            VALUES ('$itemId', '$name', '$email', '$text', '$rating')";
+            $pdo->exec($sql);
+
+            echo 
+            "<head>
+                <meta http-equiv='refresh' content='.2;URL=/?item=$itemId'>
+            </head>";
+        } else {
+            echo 
+            "<head>
+                <meta http-equiv='refresh' content='0;URL=/?item=$itemId'>
+            </head>";
+        }
     }
 
 

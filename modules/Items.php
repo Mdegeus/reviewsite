@@ -46,3 +46,16 @@ function GetItems() {
     
         return $reviews;
     }
+
+    function GetItemsWhereTitleMatch($searchKey) {
+
+        global $pdo;
+    
+        $query = $pdo->prepare("SELECT * FROM items WHERE title = '$searchKey'");
+    
+        $query->execute();
+    
+        $reviews = $query->fetchAll(PDO::FETCH_CLASS,"Categorie");
+    
+        return $reviews;
+    }

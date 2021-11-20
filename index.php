@@ -13,6 +13,10 @@
             $item = GetItem($_GET["item"]);
             $categorie = getcategorie(1);
             include_once "./templates/itemPage.php";
+        } elseif (isset($_GET["search"]) && $_GET['search'] != "") {
+            $categories = getcategories();
+            $items = GetItemsWhereTitleMatch($_GET["search"]);
+            include_once "./templates/home.php";
         } else {
             $categories = getcategories();
             $items = GetItems();

@@ -10,6 +10,8 @@
 
     <h1>Review Site</h1>
 
+    <br>
+
     <div class="row gy-3"> <!--Loop through the database and get all items-->
         <div class="col-sm-0 col-md-100">
             <a href="/"><button class="tag-button">All</button></a> 
@@ -18,6 +20,18 @@
             <?php endforeach; ?>
         </div>        
     </div>
+
+    <br>
+
+    <form class="searchbar-container" autocomplete="off">
+        <input class="searchbar" name="search" placeholder="Search"></input>
+        <br>
+        <br>
+        <h5 class="text-center">Please make sure your search term is exactly like the item it's title you are looking for.</h5>
+        <?php if (isset($_GET["categorie"])): ?>
+            <input name="categorie" hidden value="<?= $_GET["categorie"] ?>"></input>
+        <?php endif; ?>
+    </form>
 
     <div class="item-container">
         <div class="row gy-3"> <!--Loop through the database and get all items-->
@@ -41,6 +55,4 @@
             <?php endforeach; ?>
         </div>
     </div>
-
-    
 </body>
