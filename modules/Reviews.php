@@ -2,14 +2,6 @@
 
 function GetAllReviews() {
 
-    // global $pdo;
-
-    // $sql = ;
-
-    // $statement = $pdo->query($sql);
-
-    // $publishers = $statement->fetchAll(PDO::FETCH_ASSOC);
-
     global $pdo;
 
     $query = $pdo->prepare("SELECT * FROM reviews");
@@ -22,15 +14,6 @@ function GetAllReviews() {
 }
 
 function GetReviews($id) {
-
-    // global $pdo;
-
-    // $sql = ;
-
-    // $statement = $pdo->query($sql);
-
-    // $publishers = $statement->fetchAll(PDO::FETCH_ASSOC);
-
     global $pdo;
 
     $query = $pdo->prepare("SELECT * FROM reviews WHERE item_id = $id");

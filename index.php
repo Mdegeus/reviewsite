@@ -4,6 +4,8 @@
     include_once "./templates/defaults/head.php";
     include_once "./templates/defaults/requirements.php";
     include_once "./templates/defaults/classes.php";
+
+    include_once "./templates/defaults/navbar.php";
 ?>
 <body>
     <?php
@@ -13,10 +15,6 @@
             $item = GetItem($_GET["item"]);
             $categorie = getcategorie(1);
             include_once "./templates/itemPage.php";
-        } elseif (isset($_GET["search"]) && $_GET['search'] != "") {
-            $categories = getcategories();
-            $items = GetItemsWhereTitleMatch($_GET["search"]);
-            include_once "./templates/home.php";
         } else {
             $categories = getcategories();
             $items = GetItems();
@@ -27,5 +25,6 @@
 </body>
 <?php
     include_once "./templates/defaults/scripts.php";
+    include_once "./templates/defaults/modals.php";
 ?>
 </html>

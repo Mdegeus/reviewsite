@@ -1,14 +1,20 @@
-<body style="background-color: rgb(19, 19, 19); padding: 10px;">
+<body style="background-color: rgb(19, 19, 19);">
     <?php   
        global $items;
        global $categories;
 
        if (isset($_GET['categorie'])) {
            $items = GetItemsWithCatId($_GET['categorie']);
-       }
-    ?>
+        }
 
-    <h1>Review Site</h1>
+       if (isset($_GET['succes'])) {
+            if ($_GET['succes'] == "true") {
+                echo '<div class="jumbotron text-center"><h3>Your account has been successfully created.</h3></div>';
+            } else {
+                echo '<div class="jumbotron text-center"><h3>Could not create your acount. Try loging in or use another email.</h3></div>';
+            }
+        }
+    ?>
 
     <br>
 
@@ -37,7 +43,7 @@
         <div class="row gy-3"> <!--Loop through the database and get all items-->
             <?php foreach ($items as $item):?>
                 <div class="col-sm-2 col-md-2">
-                    <div class="card item-card">
+                    <div class="card item-card" id="<?= $item->title ?>">
                         <img class="card-img-top" src="<?= $item->img?>" style="width: auto;"></img>
                         <div class="card-body ">
                             <h5><?= $item->title ?></h5>

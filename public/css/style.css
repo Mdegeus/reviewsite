@@ -7,6 +7,7 @@ html, body {
 
 h1, h2, h3, h4, h5, small, strong, p{
     color: white;
+    margin: 0;
 }
 
 .modal-title {
@@ -20,6 +21,22 @@ a {
 .btn:focus {
     outline: none;
     box-shadow: none;
+}
+
+nav {
+    background-color: rgb(10, 10, 10);
+    padding: .6em;
+}
+
+.nav-item > a {
+    color: white;
+}
+
+.jumbotron {
+    width: 100%;
+    top: 2em;
+    background-color: rgb(148, 148, 148);
+    padding: .6em;
 }
 
 /* Css */
@@ -49,6 +66,10 @@ a {
     border-left-width: .4em;
     border-color: rgb(255, 92, 63);
     background-color: rgb(5, 5, 5);
+}
+
+.reviewCardHigh p, .reviewCardLow p {
+    margin-bottom: .4em;
 }
 
 .item-container {
@@ -164,7 +185,7 @@ a {
 }
 
 .textBox {
-    overflow:hidden;
+    overflow: hidden;
     background-color: rgb(43, 43, 43);
     height: fit-content;
     border-width: 1px;
